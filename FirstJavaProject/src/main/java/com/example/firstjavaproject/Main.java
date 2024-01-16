@@ -23,6 +23,11 @@ public class Main {
         int num1=Integer.parseInt(arr[0]); //Преобразовываем данные из массива в целое число по их индексу
         int num2=Integer.parseInt(arr[2]);
 
+        if (num1 < 0 || num1 > 10 || num2 < 0 || num2 > 10) {
+            System.out.println("Output:");
+            throw new RuntimeException("Числа должны быть от 1 до 10");
+        }
+
         switch (arr[1]){
             case "+":
                 res = num1 + num2;
